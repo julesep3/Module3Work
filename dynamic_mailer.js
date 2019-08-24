@@ -22,14 +22,11 @@ function printLetter(to) {
 	makeLineWithWidth(letter_width, csz, left_space)
 	console.log("========================================")
 }
-
+//
 const letter_width = 40
 const left_space = 10
 function makeLineWithWidth(width, item, desiredLeftSpace) {
-	let line = ""
-	const itemLength = item.length
-	const paddingRight = width - itemLength - desiredLeftSpace
-	line += "|"
+	let line = "|"
 	for(let i = 0; i < desiredLeftSpace; i++) {
 		line += " "
 	}
@@ -60,4 +57,4 @@ const to = {
 
 let csz = to.city + ", " + to.state + ", " + to.zip
 
-console.log(printLetter(to))
+printLetter(to)
