@@ -23,13 +23,6 @@ function printLetter(to) {
 	console.log("========================================")
 }
 
-let csz = function() {
-    let x = `${to.city}, ${to.state}, ${to.zip}`
-    return x
-}
-
-//const width = 27;
-
 const letter_width = 40
 const left_space = 10
 function makeLineWithWidth(width, item, desiredLeftSpace) {
@@ -64,5 +57,7 @@ const to = {
 	city: "OKC",
 	zip: "73105"
 }
+
+let csz = to.city + ", " + to.state + ", " + to.zip
 
 console.log(printLetter(to))
